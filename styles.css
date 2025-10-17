@@ -1,0 +1,49 @@
+:root {
+  --bg: #121212;
+  --fg: #eaeaea;
+  --muted: #9aa0a6;
+  --accent: #7c5cff;
+  --card: #1b1b1b;
+  --border: #2a2a2a;
+}
+* { box-sizing: border-box; }
+html, body { margin:0; padding:0; background:var(--bg); color:var(--fg); font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
+header { padding:20px 16px 8px; text-align:center; }
+h1 { margin:0; font-weight:700; letter-spacing:.3px; }
+.sub { margin:6px 0 0; color:var(--muted); }
+main { padding:12px; max-width:880px; margin:0 auto; }
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 12px;
+  display:flex; gap:8px; flex-wrap:wrap; justify-content:center;
+}
+.file-btn {
+  display:inline-block; padding:10px 14px; border-radius:12px;
+  background: var(--accent); color:white; font-weight:600; cursor:pointer;
+}
+.file-btn input { display:none; }
+button {
+  padding:10px 14px; border-radius:12px; border:1px solid var(--border);
+  background:#222; color:var(--fg); cursor:pointer; font-weight:600;
+}
+button:disabled { opacity:.45; cursor:not-allowed; }
+button:hover:not(:disabled) { transform: translateY(-1px); transition: transform .15s; }
+button.ghost { background: transparent; }
+.preview { display:flex; justify-content:center; padding:12px; }
+#imgCanvas { max-width:100%; border-radius:12px; border:1px solid var(--border); }
+.results { margin-top:10px; }
+.hidden { display:none; }
+.swatches { display:flex; flex-wrap:wrap; gap:12px; margin:10px 0; }
+.swatch {
+  display:flex; align-items:center; gap:8px; padding:8px; border:1px solid var(--border);
+  border-radius:12px; background:#181818; min-width:180px;
+}
+.colorbox { width:44px; height:44px; border-radius:10px; border:1px solid #0006; }
+.hex { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-weight:700; }
+textarea {
+  width:100%; background:#141414; color:var(--fg); border:1px solid var(--border);
+  border-radius:12px; padding:10px; resize:vertical;
+}
+footer { text-align:center; color:var(--muted); padding:20px 12px 28px; }

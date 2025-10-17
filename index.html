@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PixelPalette</title>
+  <meta name="theme-color" content="#121212" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="icons/icon-192.png" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>PixelPalette</h1>
+    <p class="sub">Estrai i 5 colori dominanti · Offline · Installabile</p>
+  </header>
+
+  <main>
+    <div class="card">
+      <label class="file-btn">
+        <input id="fileInput" type="file" accept="image/*" />
+        Scegli immagine
+      </label>
+      <button id="analyzeBtn" disabled>Estrai colori</button>
+      <button id="exportBtn" disabled>Esporta PNG palette</button>
+    </div>
+
+    <div class="preview">
+      <canvas id="imgCanvas" width="0" height="0" aria-label="Anteprima"></canvas>
+    </div>
+
+    <section id="results" class="results hidden">
+      <h2>Palette</h2>
+      <div id="swatches" class="swatches"></div>
+      <textarea id="hexList" readonly rows="6" spellcheck="false"></textarea>
+      <button id="copyHexBtn" class="ghost">Copia HEX</button>
+    </section>
+  </main>
+
+  <footer>
+    <button id="installBtn" class="ghost hidden">Installa su Home</button>
+    <small>© 2025 • Offline PWA • Nessun dato lascia il tuo device.</small>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
